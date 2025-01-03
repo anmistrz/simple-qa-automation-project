@@ -1,0 +1,370 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3484334700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am in the homepage from login with \"standard_user\" and \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"standard_user\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"secret_sauce\"",
+                  "offset": 57
+                }
+              ],
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_am_in_the_homepage(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-03T13:33:01.338Z",
+        "line": 18,
+        "name": "Checkout a Product",
+        "description": "",
+        "id": "checkout-product;checkout-a-product;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2359904200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click the add to cart button Sauce Labs Bike Light,Sauce Labs Bolt T-Shirt",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sauce Labs Bike Light,Sauce Labs Bolt T-Shirt",
+                  "offset": 31
+                }
+              ],
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_click_the_product(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 100041200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click the cart button",
+            "match": {
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_click_the_cart_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51754400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click the checkout button",
+            "match": {
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_click_the_checkout_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1198216700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I fill in the checkout information with \"Ayu\", \"Puspita\", and \"12345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ayu\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"Puspita\"",
+                  "offset": 47
+                },
+                {
+                  "val": "\"12345\"",
+                  "offset": 62
+                }
+              ],
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_fill_in_the_checkout_information_with_and(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 57933300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I click the continue button",
+            "match": {
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_click_the_continue_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 143834700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I verify the products before finishing the purchase Sauce Labs Bike Light,Sauce Labs Bolt T-Shirt",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sauce Labs Bike Light,Sauce Labs Bolt T-Shirt",
+                  "offset": 52
+                }
+              ],
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_verify_the_products_before_finishing_the_purchase(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52636800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click the finish button",
+            "match": {
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_click_the_finish_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 376825900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I should see the thank you message",
+            "match": {
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_should_see_the_thank_you_message()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Checkout Product",
+    "description": "",
+    "id": "checkout-product",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Checkout.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2189766800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am in the homepage from login with \"standard_user\" and \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"standard_user\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"secret_sauce\"",
+                  "offset": 57
+                }
+              ],
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_am_in_the_homepage(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-03T13:33:09.224Z",
+        "line": 13,
+        "name": "Filter a Product",
+        "description": "",
+        "id": "filter-product;filter-a-product;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage.clickFilterButton()\" because \"this.productListDashboardPage\" is null\r\n\tat stepdefinitions.StepDefinitionsFilter.i_filter_product(StepDefinitionsFilter.java:24)\r\n\tat ✽.I click the filter button(file:///C:/Belajar%20QA/finalProjectQA/final_project_qa/src/test/resources/features/Filter.feature:7)\r\n",
+              "duration": 4525100,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "I click the filter button",
+            "match": {
+              "location": "stepdefinitions.StepDefinitionsFilter.i_filter_product()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 997700,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I choose the filter \"Price (low to high)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Price (low to high)\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepdefinitions.StepDefinitionsFilter.i_choose_the_filter_and_see_the_products(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1002000,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "I should see the products filtered by \"Price (low to high)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Price (low to high)\"",
+                  "offset": 38
+                }
+              ],
+              "location": "stepdefinitions.StepDefinitionsFilter.i_should_see_the_products_filtered_by(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3633878300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am in the homepage from login with \"standard_user\" and \"secret_sauce\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"standard_user\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"secret_sauce\"",
+                  "offset": 57
+                }
+              ],
+              "location": "stepdefinitions.StepDefinitionsCheckout.i_am_in_the_homepage(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-03T13:33:11.466Z",
+        "line": 14,
+        "name": "Filter a Product",
+        "description": "",
+        "id": "filter-product;filter-a-product;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage.clickFilterButton()\" because \"this.productListDashboardPage\" is null\r\n\tat stepdefinitions.StepDefinitionsFilter.i_filter_product(StepDefinitionsFilter.java:24)\r\n\tat ✽.I click the filter button(file:///C:/Belajar%20QA/finalProjectQA/final_project_qa/src/test/resources/features/Filter.feature:7)\r\n",
+              "duration": 999100,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "I click the filter button",
+            "match": {
+              "location": "stepdefinitions.StepDefinitionsFilter.i_filter_product()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2005900,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I choose the filter \"Price (high to low)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Price (high to low)\"",
+                  "offset": 20
+                }
+              ],
+              "location": "stepdefinitions.StepDefinitionsFilter.i_choose_the_filter_and_see_the_products(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1995800,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "I should see the products filtered by \"Price (high to low)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Price (high to low)\"",
+                  "offset": 38
+                }
+              ],
+              "location": "stepdefinitions.StepDefinitionsFilter.i_should_see_the_products_filtered_by(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Filter Product",
+    "description": "",
+    "id": "filter-product",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Filter.feature",
+    "tags": []
+  }
+]

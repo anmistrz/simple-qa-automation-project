@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="13.972">
+    <testcase classname="Checkout Product" name="Checkout a Product" time="7.871">
+        <system-out><![CDATA[Given I am in the homepage from login with "standard_user" and "secret_sauce".passed
+When I click the add to cart button Sauce Labs Bike Light,Sauce Labs Bolt T-Shirt.passed
+And I click the cart button.................................................passed
+And I click the checkout button.............................................passed
+And I fill in the checkout information with "Ayu", "Puspita", and "12345"...passed
+And I click the continue button.............................................passed
+And I verify the products before finishing the purchase Sauce Labs Bike Light,Sauce Labs Bolt T-Shirt.passed
+And I click the finish button...............................................passed
+Then I should see the thank you message.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Filter Product" name="Filter a Product" time="2.221">
+        <failure message="Cannot invoke &quot;com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage.clickFilterButton()&quot; because &quot;this.productListDashboardPage&quot; is null" type="java.lang.NullPointerException"><![CDATA[Given I am in the homepage from login with "standard_user" and "secret_sauce".passed
+When I click the filter button..............................................failed
+And I choose the filter "Price (low to high)"...............................skipped
+Then I should see the products filtered by "Price (low to high)"............skipped
+
+StackTrace:
+java.lang.NullPointerException: Cannot invoke "com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage.clickFilterButton()" because "this.productListDashboardPage" is null
+	at stepdefinitions.StepDefinitionsFilter.i_filter_product(StepDefinitionsFilter.java:24)
+	at ✽.I click the filter button(file:///C:/Belajar%20QA/finalProjectQA/final_project_qa/src/test/resources/features/Filter.feature:7)
+]]></failure>
+    </testcase>
+    <testcase classname="Filter Product" name="Filter a Product 2" time="3.656">
+        <failure message="Cannot invoke &quot;com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage.clickFilterButton()&quot; because &quot;this.productListDashboardPage&quot; is null" type="java.lang.NullPointerException"><![CDATA[Given I am in the homepage from login with "standard_user" and "secret_sauce".passed
+When I click the filter button..............................................failed
+And I choose the filter "Price (high to low)"...............................skipped
+Then I should see the products filtered by "Price (high to low)"............skipped
+
+StackTrace:
+java.lang.NullPointerException: Cannot invoke "com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage.clickFilterButton()" because "this.productListDashboardPage" is null
+	at stepdefinitions.StepDefinitionsFilter.i_filter_product(StepDefinitionsFilter.java:24)
+	at ✽.I click the filter button(file:///C:/Belajar%20QA/finalProjectQA/final_project_qa/src/test/resources/features/Filter.feature:7)
+]]></failure>
+    </testcase>
+</testsuite>
