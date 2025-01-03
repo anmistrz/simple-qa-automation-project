@@ -15,9 +15,9 @@ import com.finalprojectqa.enums.OptionFilterProductEnum;
 import com.finalprojectqa.pageObjects.LoginPage;
 import com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage;
 
-import components.InitialTest;
+import components.InitialTestDriver;
 
-public class TestNGFilter extends InitialTest {
+public class TestNGFilter extends InitialTestDriver {
     LoginPage loginPage;
     OptionFilterProductEnum optionFilterProductEnum;
 

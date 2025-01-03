@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3484334700,
+              "duration": 1691782000,
               "status": "passed"
             },
             "line": 4,
@@ -34,17 +34,39 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-03T13:33:01.338Z",
+        "start_timestamp": "2025-01-03T15:45:35.032Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1301043000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.Hooks.setUp()"
+            }
+          }
+        ],
         "line": 18,
         "name": "Checkout a Product",
         "description": "",
         "id": "checkout-product;checkout-a-product;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 78488000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.Hooks.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2359904200,
+              "duration": 2225328000,
               "status": "passed"
             },
             "line": 7,
@@ -62,7 +84,7 @@
           },
           {
             "result": {
-              "duration": 100041200,
+              "duration": 71361000,
               "status": "passed"
             },
             "line": 8,
@@ -74,7 +96,7 @@
           },
           {
             "result": {
-              "duration": 51754400,
+              "duration": 30778000,
               "status": "passed"
             },
             "line": 9,
@@ -86,7 +108,7 @@
           },
           {
             "result": {
-              "duration": 1198216700,
+              "duration": 1116773000,
               "status": "passed"
             },
             "line": 10,
@@ -112,7 +134,7 @@
           },
           {
             "result": {
-              "duration": 57933300,
+              "duration": 37668000,
               "status": "passed"
             },
             "line": 11,
@@ -124,7 +146,7 @@
           },
           {
             "result": {
-              "duration": 143834700,
+              "duration": 81026000,
               "status": "passed"
             },
             "line": 12,
@@ -142,7 +164,7 @@
           },
           {
             "result": {
-              "duration": 52636800,
+              "duration": 31775000,
               "status": "passed"
             },
             "line": 13,
@@ -154,7 +176,7 @@
           },
           {
             "result": {
-              "duration": 376825900,
+              "duration": 22282000,
               "status": "passed"
             },
             "line": 14,
@@ -186,7 +208,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2189766800,
+              "duration": 1388498000,
               "status": "passed"
             },
             "line": 4,
@@ -209,19 +231,40 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-03T13:33:09.224Z",
+        "start_timestamp": "2025-01-03T15:45:41.756Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1138708000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.Hooks.setUp()"
+            }
+          }
+        ],
         "line": 13,
         "name": "Filter a Product",
         "description": "",
         "id": "filter-product;filter-a-product;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 89594000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.Hooks.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke \"com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage.clickFilterButton()\" because \"this.productListDashboardPage\" is null\r\n\tat stepdefinitions.StepDefinitionsFilter.i_filter_product(StepDefinitionsFilter.java:24)\r\n\tat ✽.I click the filter button(file:///C:/Belajar%20QA/finalProjectQA/final_project_qa/src/test/resources/features/Filter.feature:7)\r\n",
-              "duration": 4525100,
-              "status": "failed"
+              "duration": 66553000,
+              "status": "passed"
             },
             "line": 7,
             "name": "I click the filter button",
@@ -232,8 +275,8 @@
           },
           {
             "result": {
-              "duration": 997700,
-              "status": "skipped"
+              "duration": 79192000,
+              "status": "passed"
             },
             "line": 8,
             "name": "I choose the filter \"Price (low to high)\"",
@@ -250,8 +293,8 @@
           },
           {
             "result": {
-              "duration": 1002000,
-              "status": "skipped"
+              "duration": 94313000,
+              "status": "passed"
             },
             "line": 9,
             "name": "I should see the products filtered by \"Price (low to high)\"",
@@ -277,7 +320,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3633878300,
+              "duration": 1372446000,
               "status": "passed"
             },
             "line": 4,
@@ -300,19 +343,40 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-03T13:33:11.466Z",
+        "start_timestamp": "2025-01-03T15:45:44.623Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1164238000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.Hooks.setUp()"
+            }
+          }
+        ],
         "line": 14,
         "name": "Filter a Product",
         "description": "",
         "id": "filter-product;filter-a-product;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 122691000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.Hooks.tearDown()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke \"com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage.clickFilterButton()\" because \"this.productListDashboardPage\" is null\r\n\tat stepdefinitions.StepDefinitionsFilter.i_filter_product(StepDefinitionsFilter.java:24)\r\n\tat ✽.I click the filter button(file:///C:/Belajar%20QA/finalProjectQA/final_project_qa/src/test/resources/features/Filter.feature:7)\r\n",
-              "duration": 999100,
-              "status": "failed"
+              "duration": 66821000,
+              "status": "passed"
             },
             "line": 7,
             "name": "I click the filter button",
@@ -323,8 +387,8 @@
           },
           {
             "result": {
-              "duration": 2005900,
-              "status": "skipped"
+              "duration": 72395000,
+              "status": "passed"
             },
             "line": 8,
             "name": "I choose the filter \"Price (high to low)\"",
@@ -341,8 +405,8 @@
           },
           {
             "result": {
-              "duration": 1995800,
-              "status": "skipped"
+              "duration": 95073000,
+              "status": "passed"
             },
             "line": 9,
             "name": "I should see the products filtered by \"Price (high to low)\"",

@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 
 import com.finalprojectqa.pageObjects.LoginPage;
 
-import components.InitialTest;
+import components.InitialTestDriver;
 
-public class TestNGLogin extends InitialTest {
+public class TestNGLogin extends InitialTestDriver {
 
     @Test(dataProvider = "Authentication Success")
     public void successLogin(HashMap<String, String> user) throws IOException, InterruptedException {

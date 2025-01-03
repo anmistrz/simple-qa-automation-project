@@ -16,10 +16,10 @@ import com.finalprojectqa.pageObjects.checkout.CheckoutOverviewPage;
 import com.finalprojectqa.pageObjects.checkout.CheckoutPage;
 import com.finalprojectqa.pageObjects.checkout.InformationCheckoutPage;
 
-import components.InitialTest;
+import components.InitialTestDriver;
 import model.AddCheckoutModel;
 
-public class TestNGCheckout extends InitialTest {
+public class TestNGCheckout extends InitialTestDriver {
     LoginPage loginPage;
 
     @BeforeTest

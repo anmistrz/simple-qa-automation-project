@@ -73,6 +73,9 @@ formatter.background({
   "description": "",
   "keyword": "Background"
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
   "name": "I am in the homepage from login with \"standard_user\" and \"secret_sauce\"",
   "keyword": "Given "
@@ -168,6 +171,9 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.after({
+  "status": "passed"
+});
 formatter.uri("file:src/test/resources/features/Filter.feature");
 formatter.feature({
   "name": "Filter Product",
@@ -224,6 +230,9 @@ formatter.background({
   "description": "",
   "keyword": "Background"
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
   "name": "I am in the homepage from login with \"standard_user\" and \"secret_sauce\"",
   "keyword": "Given "
@@ -247,8 +256,7 @@ formatter.match({
   "location": "stepdefinitions.StepDefinitionsFilter.i_filter_product()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException: Cannot invoke \"com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage.clickFilterButton()\" because \"this.productListDashboardPage\" is null\r\n\tat stepdefinitions.StepDefinitionsFilter.i_filter_product(StepDefinitionsFilter.java:24)\r\n\tat ✽.I click the filter button(file:///C:/Belajar%20QA/finalProjectQA/final_project_qa/src/test/resources/features/Filter.feature:7)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "I choose the filter \"Price (low to high)\"",
@@ -258,7 +266,7 @@ formatter.match({
   "location": "stepdefinitions.StepDefinitionsFilter.i_choose_the_filter_and_see_the_products(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "I should see the products filtered by \"Price (low to high)\"",
@@ -268,12 +276,18 @@ formatter.match({
   "location": "stepdefinitions.StepDefinitionsFilter.i_should_see_the_products_filtered_by(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
 });
 formatter.background({
   "name": "",
   "description": "",
   "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.step({
   "name": "I am in the homepage from login with \"standard_user\" and \"secret_sauce\"",
@@ -298,8 +312,7 @@ formatter.match({
   "location": "stepdefinitions.StepDefinitionsFilter.i_filter_product()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException: Cannot invoke \"com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage.clickFilterButton()\" because \"this.productListDashboardPage\" is null\r\n\tat stepdefinitions.StepDefinitionsFilter.i_filter_product(StepDefinitionsFilter.java:24)\r\n\tat ✽.I click the filter button(file:///C:/Belajar%20QA/finalProjectQA/final_project_qa/src/test/resources/features/Filter.feature:7)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "I choose the filter \"Price (high to low)\"",
@@ -309,7 +322,7 @@ formatter.match({
   "location": "stepdefinitions.StepDefinitionsFilter.i_choose_the_filter_and_see_the_products(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "I should see the products filtered by \"Price (high to low)\"",
@@ -319,6 +332,9 @@ formatter.match({
   "location": "stepdefinitions.StepDefinitionsFilter.i_should_see_the_products_filtered_by(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
 });
 });
