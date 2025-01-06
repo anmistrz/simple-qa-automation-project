@@ -19,7 +19,7 @@ import com.finalprojectqa.pageObjects.checkout.InformationCheckoutPage;
 import components.InitialTestDriver;
 import model.AddCheckoutModel;
 
-public class TestNGCheckout extends InitialTestDriver {
+public class TestNGCheckoutTest extends InitialTestDriver {
     LoginPage loginPage;
 
     @BeforeTest

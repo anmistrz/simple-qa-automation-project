@@ -38,7 +38,7 @@ public class InitialTestDriver {
             driver.manage().window().maximize();
 
             System.out.println("hasilnya" + driver);
-            // return driver;
+            return driver;
         }
         
 

@@ -17,7 +17,7 @@ import com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage;
 
 import components.InitialTestDriver;
 
-public class TestNGFilter extends InitialTestDriver {
+public class TestNGFilterTest extends InitialTestDriver {
     LoginPage loginPage;
     OptionFilterProductEnum optionFilterProductEnum;
 

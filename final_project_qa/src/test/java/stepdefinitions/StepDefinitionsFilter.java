@@ -1,6 +1,4 @@
 package stepdefinitions;
-
-import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -8,9 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage;
 
-import components.InitialTestDriver;
 import hooks.Hooks;
-import components.InitialTestDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

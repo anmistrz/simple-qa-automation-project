@@ -14,8 +14,7 @@ import io.cucumber.junit.CucumberOptions;
             "html:target/cucumber-report.html",          // HTML report
             "json:target/cucumber-report.json",          // JSON report
             "junit:target/cucumber-report.xml"           // JUnit XML report
-        },
-        strict = true                                  // Fail if there are pending or undefined steps 
+        }                               // Fail if there are pending or undefined steps 
 
 )
 

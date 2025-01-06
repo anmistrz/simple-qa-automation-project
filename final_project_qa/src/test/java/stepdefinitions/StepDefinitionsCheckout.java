@@ -12,9 +12,6 @@ import com.finalprojectqa.pageObjects.LoginPage;
 import com.finalprojectqa.pageObjects.checkout.CheckoutOverviewPage;
 import com.finalprojectqa.pageObjects.checkout.CheckoutPage;
 import com.finalprojectqa.pageObjects.checkout.InformationCheckoutPage;
-import com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage;
-
-import components.InitialTestDriver;
 import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
