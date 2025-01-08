@@ -7,6 +7,7 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,9 +16,9 @@ import com.finalprojectqa.enums.OptionFilterProductEnum;
 import com.finalprojectqa.pageObjects.LoginPage;
 import com.finalprojectqa.pageObjects.dashboard.ProductListDashboardPage;
 
-import components.InitialTest;
+import components.InitialTestDriver;
 
-public class TestNGFilter extends InitialTest {
+public class TestNGFilterTest extends InitialTestDriver {
     LoginPage loginPage;
     OptionFilterProductEnum optionFilterProductEnum;
 
@@ -33,7 +34,7 @@ public class TestNGFilter extends InitialTest {
         loginPage.verifyInHomePage().getText().contains("Swag Labs");
     }
 
-    @Test(dependsOnMethods = "login", dataProvider = "Filter")
+    @Test(dependsOnMethods = "login",  dataProvider = "Filter")
     public void filterInventory(HashMap<String, List<String>> filter) throws InterruptedException {
         ProductListDashboardPage productListDashboardPage = new ProductListDashboardPage(driver);
         List<String> dataFilterName = filter.get("filter");

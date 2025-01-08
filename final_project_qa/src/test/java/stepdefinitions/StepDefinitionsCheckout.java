@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -11,22 +12,24 @@ import com.finalprojectqa.pageObjects.LoginPage;
 import com.finalprojectqa.pageObjects.checkout.CheckoutOverviewPage;
 import com.finalprojectqa.pageObjects.checkout.CheckoutPage;
 import com.finalprojectqa.pageObjects.checkout.InformationCheckoutPage;
-
-import components.InitialTest;
+import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class StepDefinitionsCheckout extends InitialTest {
+public class StepDefinitionsCheckout {
     LoginPage loginPage;
     CheckoutPage checkoutPage;
     InformationCheckoutPage informationCheckoutPage;
     CheckoutOverviewPage checkoutOverviewPage;
+    WebDriver driver = Hooks.getDriver();
 
     @Given("I am in the homepage from login with {string} and {string}")
     public void i_am_in_the_homepage(String username, String password) throws IOException, InterruptedException {
-        loginPage = launchApplication();
+        // loginPage = launchApplication();
+        loginPage = new LoginPage(driver);
+        loginPage.goToMainPage();
         loginPage.loginAuth(username, password);
         loginPage.getElementLoginButton().click();
         loginPage.verifyInHomePage().getText().contains("Swag Labs");
@@ -87,7 +90,7 @@ public class StepDefinitionsCheckout extends InitialTest {
     @Then("I should see the thank you message")
     public void i_should_see_the_thank_you_message() {
         checkoutOverviewPage.verifySuccessCheckout();
-        closeDriver();
+        // closeDriver();
     }
 
 

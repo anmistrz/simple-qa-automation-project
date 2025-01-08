@@ -2,7 +2,8 @@ Feature: Checkout Product
 
 Background:
     Given I am in the homepage from login with "standard_user" and "secret_sauce"
-    
+
+@Tag("profileTest")  
 Scenario Outline: Checkout a Product
     When I click the add to cart button <listOfProducts>
     And I click the cart button

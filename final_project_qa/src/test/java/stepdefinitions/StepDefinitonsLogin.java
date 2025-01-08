@@ -6,13 +6,13 @@ import org.testng.Assert;
 
 import com.finalprojectqa.pageObjects.LoginPage;
 
-import components.InitialTest;
+import components.InitialTestDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class StepDefinitonsLogin extends InitialTest {
+public class StepDefinitonsLogin extends InitialTestDriver {
     LoginPage loginPage;
 
     @Given("I am in the login page")
@@ -33,14 +33,14 @@ public class StepDefinitonsLogin extends InitialTest {
     @Then("I should see the homepage")
     public void i_should_see_the_homepage() {
         Assert.assertTrue(loginPage.verifyInHomePage().getText().contains("Swag Labs"));
-        closeDriver();
+        // closeDriver();
     }
 
     @Then("I should see the error message")
     public void i_should_see_the_error_message() throws InterruptedException {
         Boolean isShowErrorMesage = loginPage.isShowErrorMesage();
         Assert.assertTrue(isShowErrorMesage);
-        closeDriver();
+        // closeDriver();
     }
 
 }

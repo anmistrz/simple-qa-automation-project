@@ -3,6 +3,7 @@ Feature: Filter Product
 Background:
     Given I am in the homepage from login with "standard_user" and "secret_sauce"
 
+@Tag("profileTest")
 Scenario Outline: Filter a Product
     When I click the filter button
     And I choose the filter "<filter>"

@@ -3,33 +3,54 @@ package automation.login;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.junit.AfterClass;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.finalprojectqa.pageObjects.LoginPage;
 
-import components.InitialTest;
+import components.InitialTestDriver;
 
-public class TestNGLogin extends InitialTest {
+public class TestNGLoginTest extends InitialTestDriver {
+    LoginPage loginPage;
 
-    @Test(dataProvider = "Authentication Success")
-    public void successLogin(HashMap<String, String> user) throws IOException, InterruptedException {
-        LoginPage loginPage = launchApplication();
-        loginPage.loginAuth(user.get("username"), user.get("password"));
-        loginPage.getElementLoginButton().click();
-        Assert.assertTrue(loginPage.verifyInHomePage().getText().contains("Swag Labs"));
-        closeDriver();
+    @BeforeMethod
+    public void setUp() throws IOException{
+        System.out.println("ini hasilnadafga");
+        loginPage = launchApplication();
     }
 
-    @Test(dataProvider = "Authentication Fail")
+    @Test(dataProvider = "Authentication Fail", priority = 1)
     public void failLogin(HashMap<String, String> user) throws IOException, InterruptedException {
-        LoginPage loginPage = launchApplication();
+        // LoginPage loginPage = new LoginPage(driver);
+        // loginPage = launchApplication();
         loginPage.loginAuth(user.get("username"), user.get("password"));
         loginPage.getElementLoginButton().click();
         Boolean isShowErrorMesage = loginPage.isShowErrorMesage();
         Assert.assertTrue(isShowErrorMesage);
+        loginPage.loginAuth("", "");
+        Thread.sleep(2000);
         closeDriver();
+    }
+
+    @Test(dataProvider = "Authentication Success")
+    public void successLogin(HashMap<String, String> user) throws IOException, InterruptedException {
+        // loginPage = launchApplication();
+        loginPage.loginAuth(user.get("username"), user.get("password"));
+        loginPage.getElementLoginButton().click();
+        Assert.assertTrue(loginPage.verifyInHomePage().getText().contains("Swag Labs"));
+    }
+
+
+    @AfterTest
+    public void close(){
+        System.out.println("hasilnya asdalah");
+        driver.quit();
     }
 
     @DataProvider(name = "Authentication Success")
