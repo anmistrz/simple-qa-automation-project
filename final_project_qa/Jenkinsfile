@@ -20,7 +20,7 @@ pipeline {
                 git branch: "${env.BRANCH_NAME}", url: 'https://github.com/anmistrz/simple-qa-automation-project.git'
 
                 bat "cd final_project_qa"
-                bat "ls -a"
+                bat "dir /s"
                 bat "docker compose down"
                 bat "mvn clean install"
 
@@ -40,7 +40,7 @@ pipeline {
                 bat "mvn test -PTestng1  -Dbrowser=chrome"
                 echo "Test completed"
                 bat "cd target/cucumber-report.html"
-                bat "ls -a"
+                bat "dir /s"
             }
         }
 
