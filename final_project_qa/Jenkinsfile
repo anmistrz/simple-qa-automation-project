@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-        environment {
+    environment {
         // Definisikan variabel lingkungan jika diperlukan
         // Misalnya untuk kredensial, server, dll.
         DEPLOY_SERVER = 'your.deploy.server'
@@ -19,13 +19,13 @@ pipeline {
                 // Get some code from a GitHub repository
                 git branch: "${env.BRANCH_NAME}", url: 'https://github.com/anmistrz/simple-qa-automation-project.git'
 
-                sh "cd final_project_qa"
-                sh "pwd final_project_qa"
-                sh "docker compose down"
-                sh "mvn clean install"
+                bat "cd final_project_qa"
+                bat "pwd final_project_qa"
+                bat "docker compose down"
+                bat "mvn clean install"
 
                 // // Run Maven on a Unix agent.
-                // sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -36,26 +36,26 @@ pipeline {
         stage('Test') {
             steps {
                 // Get some code from a GitHub repository
-                sh "cd final_project_qa"
-                sh "mvn test -PTestng1  -Dbrowser=chrome"
+                bat "cd final_project_qa"
+                bat "mvn test -PTestng1  -Dbrowser=chrome"
                 echo "Test completed"
-                sh "cd target/cucumber-report.html"
-                sh "ls -a"
+                bat "cd target/cucumber-report.html"
+                bat "ls -a"
             }
         }
 
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                sh "cd final_project_qa"
-                sh "target/cucumber-report.html"
-                sh """
+                bat "cd final_project_qa"
+                bat "target/cucumber-report.html"
+                bat """
                         cat report.js
                         cat formatter.js
                         cat index.html
                         cat jquery-3.4.1.min.js
                     """
-                sh "docker compose build"
+                bat "docker compose build"
                 echo "Build completed"
             }
         }
@@ -63,8 +63,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Get some code from a GitHub repository
-                sh "cd final_project_qa"
-                sh "docker compose up -d"
+                bat "cd final_project_qa"
+                bat "docker compose up -d"
                 echo "Deploy completed"
             }
         }
@@ -72,8 +72,8 @@ pipeline {
         stage('Clean') {
             steps {
                 // Get some code from a GitHub repository
-                sh "cd final_project_qa"
-                sh "mvn clean install"
+                bat "cd final_project_qa"
+                bat "mvn clean install"
                 echo "Clean completed"
             }
         }
@@ -96,3 +96,4 @@ pipeline {
         }
     }
 }
+
