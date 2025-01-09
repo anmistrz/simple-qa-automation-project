@@ -20,7 +20,7 @@ pipeline {
                 git branch: "${env.BRANCH_NAME}", url: 'https://github.com/anmistrz/simple-qa-automation-project.git'
 
                 bat "cd final_project_qa"
-                bat "pwd final_project_qa"
+                bat "ls -a"
                 bat "docker compose down"
                 bat "mvn clean install"
 
