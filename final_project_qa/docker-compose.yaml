@@ -3,7 +3,7 @@ services:
     image: nginx:latest
     container_name: reports_qa_automation
     volumes: 
-      - ./target/cucumber-report.html:/usr/share/nginx/html
+      - ./target/surfire-reports/testng-native-results:/usr/share/nginx/html
     ports:
       - "8081:80"
     restart: always

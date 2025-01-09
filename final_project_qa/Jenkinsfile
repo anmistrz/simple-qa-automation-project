@@ -19,10 +19,12 @@ pipeline {
                 // Get some code from a GitHub repository
                 git branch: "${env.BRANCH_NAME}", url: 'https://github.com/anmistrz/simple-qa-automation-project.git'
 
-                bat "cd final_project_qa"
-                bat "dir /s"
-                bat "docker compose down"
-                bat "mvn clean install"
+                bat '''
+                    dir
+                    cd final_project_qa
+                    docker compose down
+                    mvn clean install
+                '''
 
                 // // Run Maven on a Unix agent.
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
@@ -36,26 +38,43 @@ pipeline {
         stage('Test') {
             steps {
                 // Get some code from a GitHub repository
-                bat "cd final_project_qa"
-                bat "mvn test -PTestng1  -Dbrowser=chrome"
+                bat '''
+                    cd final_project_qa"
+                    mvn test -PTestng1  -Dbrowser=chrome
+                '''
                 echo "Test completed"
-                bat "cd target/cucumber-report.html"
-                bat "dir /s"
+
+                bat '''
+                    cd final_project_qa"
+                    cd target
+                    dir
+                    cd surefire-reports
+                    dir
+                '''
             }
         }
 
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                bat "cd final_project_qa"
-                bat "target/cucumber-report.html"
-                bat """
-                        cat report.js
-                        cat formatter.js
+                bat '''
+                        cd final_project_qa
+                        cd target/surefire-reports
+                        cd testng-native-results
+                        cat testng-results.xml
+                        cat failed.png
+                        cat passed.png
+                        cat skipped.png
                         cat index.html
-                        cat jquery-3.4.1.min.js
-                    """
-                bat "docker compose build"
+                        cat bullet_point.png
+                        cat jquery-3.6.0.min.js
+                        cat testng-reports.css
+                        cat testng-reports.js
+                        cat navigator-bullet.png
+
+                        cd ..
+                        docker compose build
+                    '''
                 echo "Build completed"
             }
         }
@@ -63,8 +82,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Get some code from a GitHub repository
-                bat "cd final_project_qa"
-                bat "docker compose up -d"
+                bat '''
+                    cd final_project_qa
+                    docker compose up -d
+                '''
                 echo "Deploy completed"
             }
         }
@@ -72,8 +93,10 @@ pipeline {
         stage('Clean') {
             steps {
                 // Get some code from a GitHub repository
-                bat "cd final_project_qa"
-                bat "mvn clean install"
+                bat '''
+                    final_project_qa"
+                    mvn clean install
+                '''
                 echo "Clean completed"
             }
         }
