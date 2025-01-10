@@ -80,7 +80,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 bat '''
-                    final_project_qa"
+                    cd final_project_qa"
                     mvn clean install
                 '''
                 echo "Clean completed"
