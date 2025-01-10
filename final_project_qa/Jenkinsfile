@@ -59,20 +59,6 @@ pipeline {
                 // Get some code from a GitHub repository
                 bat '''
                         cd final_project_qa
-                        cd target/surefire-reports
-                        cd testng-native-results
-                        cat testng-results.xml
-                        cat failed.png
-                        cat passed.png
-                        cat skipped.png
-                        cat index.html
-                        cat bullet_point.png
-                        cat jquery-3.6.0.min.js
-                        cat testng-reports.css
-                        cat testng-reports.js
-                        cat navigator-bullet.png
-
-                        cd ..
                         docker compose build
                     '''
                 echo "Build completed"
